@@ -1,5 +1,4 @@
 # /// script
-# requires-python = ">=3.13"
 # dependencies = [
 #   "ics==0.7.2",
 #   "python-dotenv==1.2.1",
@@ -27,8 +26,6 @@ def generate_ics(output_file: str):
     # Define the API endpoint and payload
     url = "https://www.meetup.com/gql2"
     headers = {
-        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0",
-        "Accept-Encoding": "gzip, deflate, br, zstd",
         "Content-Type": "application/json",
         "__meetup_auth_access_token": access_token,
     }
