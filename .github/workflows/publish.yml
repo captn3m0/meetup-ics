@@ -19,7 +19,7 @@ concurrency:
 jobs:
   # Build
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - name: Install the default version of uv
