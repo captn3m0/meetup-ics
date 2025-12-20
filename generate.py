@@ -27,7 +27,8 @@ def generate_ics(output_file: str):
     url = "https://www.meetup.com/gql2"
     headers = {
         "Content-Type": "application/json",
-        "__meetup_auth_access_token": access_token,
+        "Cookie": f"__meetup_auth_access_token={access_token}",
+        "Accept-Encoding": "gzip"
     }
     payload = {
         "operationName": "getEventsFromYourGroups",
