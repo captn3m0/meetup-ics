@@ -2,6 +2,7 @@
 # dependencies = [
 #   "ics==0.7.2",
 #   "python-dotenv==1.2.1",
+#   "tatsu==5.16.0",
 # ]
 # ///
 
