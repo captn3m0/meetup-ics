@@ -41,7 +41,7 @@ def generate_ics(output_file: str):
         "extensions": {
             "persistedQuery": {
                 "version": 1,
-                "sha256Hash": "0956d4cd0b90bfec326b58d4411948898be61747cd7a6e73005c7c924699ada5"
+                "sha256Hash": "d482ec317a04ce4fca6357d6873ffeaeff933c7d359d78f272f928c6a69e1b1b"
             }
         }
     }
