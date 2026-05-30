@@ -22,14 +22,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
       - name: Install the default version of uv
         id: setup-uv
         uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
       - name: Build
         env:
           MEETUP_AUTH_ACCESS_TOKEN: ${{ secrets.meetup }}
+          STEPS_SETUP_UV_OUTPUTS_UV_VERSION: ${{ steps.setup-uv.outputs.uv-version }}
         run: |
-          echo "Installed uv version is ${{ steps.setup-uv.outputs.uv-version }}"
+          echo "Installed uv version is ${STEPS_SETUP_UV_OUTPUTS_UV_VERSION}"
           uv run generate.py
       - name: Upload artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
